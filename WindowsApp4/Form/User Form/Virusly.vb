@@ -1087,15 +1087,19 @@
     End Sub
 
     Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
-        Dim result As Integer = InputBox("Do you want to clear all screens?", "ClearSreens", "weeeerty")
-        If result = DialogResult.Cancel Then
-            MessageBox.Show("Process Stopped")
-        ElseIf result = DialogResult.No Then
-            MessageBox.Show("Process Stopped")
+        Dim result As Integer = MessageBox.Show("The Name Would Be set as a default (""WXE"")," + Environment.NewLine + "Continue?", "Infromation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If result = DialogResult.No Then
+            MessageBox.Show("Script Operation Cancelled")
         ElseIf result = DialogResult.Yes Then
-            RichTextBox1.Text = "@echo off"
-            RichTextBox2.Text = ""
-            MessageBox.Show("Screens Cleared")
+            RichTextBox1.Text += Environment.NewLine + "rem ---------------------------------"
+            RichTextBox1.Text += Environment.NewLine + "rem Hide CMD Window"
+            RichTextBox1.Text += Environment.NewLine + "if exist winstart.vbs goto next"
+            RichTextBox1.Text += Environment.NewLine + "echo set objShell = CreateObject(""WScript.Shell"") >> winstart.vbs"
+            RichTextBox1.Text += Environment.NewLine + "echo objShell.Run ""WXE.bat"", vbHide, TRUE >> winstart.vbs"
+            RichTextBox1.Text += Environment.NewLine + "start """" ""winstart.vbs"""
+            RichTextBox1.Text += Environment.NewLine + "exit"
+            RichTextBox1.Text += Environment.NewLine + ":next"
+            RichTextBox1.Text += Environment.NewLine + "rem ---------------------------------"
         End If
     End Sub
 

@@ -34,8 +34,6 @@ Partial Class Viral
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ButtonVirus = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -44,6 +42,8 @@ Partial Class Viral
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonVirus = New System.Windows.Forms.Button()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -112,45 +112,6 @@ Partial Class Viral
         Me.Label1.Size = New System.Drawing.Size(122, 42)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "<ER40R>"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1564510
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 145)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(131, 62)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Ransomwares"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'ButtonVirus
-        '
-        Me.ButtonVirus.BackColor = System.Drawing.Color.Transparent
-        Me.ButtonVirus.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1564534
-        Me.ButtonVirus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonVirus.FlatAppearance.BorderSize = 0
-        Me.ButtonVirus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
-        Me.ButtonVirus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
-        Me.ButtonVirus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonVirus.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonVirus.ForeColor = System.Drawing.Color.White
-        Me.ButtonVirus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonVirus.Location = New System.Drawing.Point(0, 77)
-        Me.ButtonVirus.Name = "ButtonVirus"
-        Me.ButtonVirus.Size = New System.Drawing.Size(131, 62)
-        Me.ButtonVirus.TabIndex = 0
-        Me.ButtonVirus.Text = "Batch Virus"
-        Me.ButtonVirus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ButtonVirus.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -221,6 +182,45 @@ Partial Class Viral
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1564510
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(0, 145)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(131, 62)
+        Me.Button1.TabIndex = 31
+        Me.Button1.Text = "Ransomwares"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'ButtonVirus
+        '
+        Me.ButtonVirus.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonVirus.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1564534
+        Me.ButtonVirus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonVirus.FlatAppearance.BorderSize = 0
+        Me.ButtonVirus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
+        Me.ButtonVirus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
+        Me.ButtonVirus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonVirus.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonVirus.ForeColor = System.Drawing.Color.White
+        Me.ButtonVirus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonVirus.Location = New System.Drawing.Point(0, 77)
+        Me.ButtonVirus.Name = "ButtonVirus"
+        Me.ButtonVirus.Size = New System.Drawing.Size(131, 62)
+        Me.ButtonVirus.TabIndex = 0
+        Me.ButtonVirus.Text = "Batch Virus"
+        Me.ButtonVirus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ButtonVirus.UseVisualStyleBackColor = False
         '
         'Viral
         '
