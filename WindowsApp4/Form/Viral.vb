@@ -70,8 +70,8 @@ Public Class Viral
         If SaveFileDialog1.ShowDialog = DialogResult.OK _
         Then
             filesaved = 1
-            My.Computer.FileSystem.WriteAllText _
-            (SaveFileDialog1.FileName, Virus2.RichTextBox1.Text, True)
+            ' My.Computer.FileSystem.WriteAllText _
+            '(SaveFileDialog1.FileName, Viral.RichTextBox1.Text, True)
         End If
 
     End Sub

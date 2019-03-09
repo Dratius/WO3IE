@@ -165,10 +165,10 @@
     <Compile Include="Form\User Form\Ransomwares.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\User Form\Virus.Designer.vb">
-      <DependentUpon>Virus.vb</DependentUpon>
+    <Compile Include="Form\User Form\Virusly.Designer.vb">
+      <DependentUpon>Virusly.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\User Form\Virus.vb">
+    <Compile Include="Form\User Form\Virusly.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Classes\WindowsApp4.vb" />
@@ -198,11 +198,11 @@
     <EmbeddedResource Include="Form\User Form\Ransomwares.resx">
       <DependentUpon>Ransomwares.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Virus.en-TZ.resx">
-      <DependentUpon>Virus.vb</DependentUpon>
+    <EmbeddedResource Include="Form\User Form\Virusly.en-TZ.resx">
+      <DependentUpon>Virusly.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Virus.resx">
-      <DependentUpon>Virus.vb</DependentUpon>
+    <EmbeddedResource Include="Form\User Form\Virusly.resx">
+      <DependentUpon>Virusly.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports WindowsApp4
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Viral
     Inherits System.Windows.Forms.Form
 
@@ -42,7 +44,6 @@ Partial Class Viral
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Virus2 = New WindowsApp4.Virus()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -221,24 +222,12 @@ Partial Class Viral
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
         '
-        'Virus2
-        '
-        Me.Virus2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Virus2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Virus2.BackColor = System.Drawing.Color.White
-        Me.Virus2.Location = New System.Drawing.Point(150, 77)
-        Me.Virus2.Name = "Virus2"
-        Me.Virus2.Size = New System.Drawing.Size(640, 565)
-        Me.Virus2.TabIndex = 33
-        Me.Virus2.Timer1 = Nothing
-        '
         'Viral
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(791, 645)
-        Me.Controls.Add(Me.Virus2)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -277,5 +266,8 @@ Partial Class Viral
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
-    Friend WithEvents Virus2 As WindowsApp4.Virus
+
+    Public Sub New(virus2 As Virusly)
+        'Me.Virus2 = virus2
+    End Sub
 End Class

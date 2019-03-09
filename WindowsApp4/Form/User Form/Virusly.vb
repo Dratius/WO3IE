@@ -1,4 +1,4 @@
-﻿Public Class Virus
+﻿Public Class Virusly
     Private filesaved As Integer
     Public Property Timer1 As Object
 
