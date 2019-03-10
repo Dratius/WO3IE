@@ -114,10 +114,10 @@
     <Compile Include="Classes\ButtonZ.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form\BatchVault.Designer.vb">
+    <Compile Include="Form\User Form\BatchVault.Designer.vb">
       <DependentUpon>BatchVault.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\BatchVault.vb">
+    <Compile Include="Form\User Form\BatchVault.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form\Viral.vb">
@@ -178,7 +178,7 @@
     <Compile Include="Classes\WindowsApp4.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form\BatchVault.resx">
+    <EmbeddedResource Include="Form\User Form\BatchVault.resx">
       <DependentUpon>BatchVault.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Main.resx">
