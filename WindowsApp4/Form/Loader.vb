@@ -44,7 +44,7 @@
         ProgressBar1.BackColor = Color.White
         If ProgressBar1.Value = 100% Then
             Timer1.Enabled = False
-            'Viral.sh
+            Viral.Show()
             Me.Close()
         Else
             ProgressBar1.Value = ProgressBar1.Value + 1

@@ -3,7 +3,7 @@ Public Class Viral
     Public Property Timer1 As Object
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Virus1.BringToFront()
+        BatchVault2.BringToFront()
         PanelLeft.Height = ButtonVirus.Height
         PanelLeft.Top = ButtonVirus.Top
         Flash()
@@ -19,9 +19,8 @@ Public Class Viral
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonVirus.Click
-        'Button2.Visible = False
-        'Button14.Visible = True
-        'Virus1.BringToFront()
+        Button7.Visible = True
+        BatchVault2.BringToFront()
         PanelLeft.Height = ButtonVirus.Height
         PanelLeft.Top = ButtonVirus.Top
         Flash()
@@ -32,9 +31,9 @@ Public Class Viral
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        'Button14.Visible = False
+        Button7.Visible = False
         'Button2.Visible = True
-        'Ransomwares1.BringToFront()
+        Ransomwares2.BringToFront()
         PanelLeft.Height = Button1.Height
         PanelLeft.Top = Button1.Top
         Flash()
@@ -70,8 +69,8 @@ Public Class Viral
         If SaveFileDialog1.ShowDialog = DialogResult.OK _
         Then
             filesaved = 1
-            ' My.Computer.FileSystem.WriteAllText _
-            '(SaveFileDialog1.FileName, Viral.RichTextBox1.Text, True)
+            My.Computer.FileSystem.WriteAllText _
+            (SaveFileDialog1.FileName, BatchVault2.RichTextBox1.Text, True)
         End If
 
     End Sub
