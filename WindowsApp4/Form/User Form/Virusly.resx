@@ -296,6 +296,9 @@
   <data name="&gt;&gt;CheckBox5.Name" xml:space="preserve">
     <value>CheckBox5</value>
   </data>
+  <data name="Button39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Franklin Gothic Medium Cond, 9.75pt</value>
+  </data>
   <data name="RichTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -510,8 +513,8 @@
   <data name="Button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 24</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Virus</value>
+  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
+    <value>Panel4</value>
   </data>
   <data name="Button35.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -714,8 +717,8 @@
   <data name="Button6.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="Button33.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Franklin Gothic Medium Cond, 9.75pt</value>
+  <data name="&gt;&gt;Button6.Name" xml:space="preserve">
+    <value>Button6</value>
   </data>
   <data name="Button43.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 67</value>
@@ -1026,9 +1029,6 @@
   <data name="Button18.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 24</value>
   </data>
-  <data name="&gt;&gt;RichTextBox2.Parent" xml:space="preserve">
-    <value>Panel4</value>
-  </data>
   <data name="TabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -1244,9 +1244,6 @@
   </data>
   <data name="&gt;&gt;Button48.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
   </data>
   <data name="&gt;&gt;TextBox5.Parent" xml:space="preserve">
     <value>GroupBox6</value>
@@ -1755,6 +1752,9 @@
   </data>
   <data name="&gt;&gt;Panel5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Virusly</value>
   </data>
   <data name="RichTextBox1.Text" xml:space="preserve">
     <value>@echo off</value>
@@ -2323,11 +2323,11 @@
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;Button6.Name" xml:space="preserve">
-    <value>Button6</value>
-  </data>
-  <data name="Button39.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Button33.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 9.75pt</value>
+  </data>
+  <data name="TextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
   <data name="CheckBox5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Franklin Gothic Medium Cond, 9.75pt</value>

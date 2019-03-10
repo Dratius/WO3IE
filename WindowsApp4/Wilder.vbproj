@@ -114,6 +114,12 @@
     <Compile Include="Classes\ButtonZ.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form\BatchVault.Designer.vb">
+      <DependentUpon>BatchVault.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BatchVault.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form\Viral.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -169,17 +175,20 @@
     <Compile Include="Form\User Form\Ransomwares.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\User Form\Virusly.Designer.vb">
-      <DependentUpon>Virusly.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\User Form\Virusly.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Classes\WindowsApp4.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\BatchVault.resx">
+      <DependentUpon>BatchVault.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Viral.af.resx">
+      <DependentUpon>Viral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Viral.en-TZ.resx">
+      <DependentUpon>Viral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Viral.resx">
       <DependentUpon>Viral.vb</DependentUpon>
@@ -201,12 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form\Ransomwares.resx">
       <DependentUpon>Ransomwares.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Virusly.en-TZ.resx">
-      <DependentUpon>Virusly.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Virusly.resx">
-      <DependentUpon>Virusly.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

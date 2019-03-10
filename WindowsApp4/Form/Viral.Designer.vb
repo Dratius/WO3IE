@@ -34,16 +34,17 @@ Partial Class Viral
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonVirus = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
-        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ButtonVirus = New System.Windows.Forms.Button()
+        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+        Me.BatchVault1 = New Global.WindowsApp4.BatchVault()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -67,6 +68,7 @@ Partial Class Viral
         Me.PanelLeft.BackColor = System.Drawing.Color.Lime
         Me.PanelLeft.Location = New System.Drawing.Point(140, 77)
         Me.PanelLeft.Name = "PanelLeft"
+        Me.HelpProvider1.SetShowHelp(Me.PanelLeft, True)
         Me.PanelLeft.Size = New System.Drawing.Size(10, 62)
         Me.PanelLeft.TabIndex = 4
         '
@@ -82,6 +84,7 @@ Partial Class Viral
         Me.Panel2.ForeColor = System.Drawing.Color.Goldenrod
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
+        Me.HelpProvider1.SetShowHelp(Me.Panel2, True)
         Me.Panel2.Size = New System.Drawing.Size(150, 645)
         Me.Panel2.TabIndex = 1
         '
@@ -98,6 +101,7 @@ Partial Class Viral
         Me.Button7.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Button7.Location = New System.Drawing.Point(19, 544)
         Me.Button7.Name = "Button7"
+        Me.HelpProvider1.SetShowHelp(Me.Button7, True)
         Me.Button7.Size = New System.Drawing.Size(103, 31)
         Me.Button7.TabIndex = 33
         Me.Button7.Text = "Save As"
@@ -106,82 +110,14 @@ Partial Class Viral
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Freestyle Script", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Freestyle Script", 26.25!)
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
+        Me.HelpProvider1.SetShowHelp(Me.Label1, True)
         Me.Label1.Size = New System.Drawing.Size(122, 42)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "<ER40R>"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Cyan
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(150, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(641, 10)
-        Me.Panel1.TabIndex = 5
-        '
-        'Panel3
-        '
-        Me.Panel3.Location = New System.Drawing.Point(407, 12)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(225, 50)
-        Me.Panel3.TabIndex = 32
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.Button2)
-        Me.Panel4.Controls.Add(Me.PictureBox1)
-        Me.Panel4.Location = New System.Drawing.Point(150, 12)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(641, 47)
-        Me.Panel4.TabIndex = 32
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1250668
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(581, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(21, 18)
-        Me.Button3.TabIndex = 33
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._63373
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(608, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(21, 18)
-        Me.Button2.TabIndex = 32
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
-        Me.PictureBox1.Image = Global.WindowsApp4.My.Resources.Resources.BRILLIANT_ARTS_LOGO_MAIN
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 31
-        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
@@ -192,10 +128,12 @@ Partial Class Viral
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Button1.Location = New System.Drawing.Point(0, 145)
         Me.Button1.Name = "Button1"
+        Me.HelpProvider1.SetShowHelp(Me.Button1, True)
         Me.Button1.Size = New System.Drawing.Size(131, 62)
         Me.Button1.TabIndex = 31
         Me.Button1.Text = "Ransomwares"
@@ -211,16 +149,106 @@ Partial Class Viral
         Me.ButtonVirus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
         Me.ButtonVirus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
         Me.ButtonVirus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonVirus.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonVirus.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold)
         Me.ButtonVirus.ForeColor = System.Drawing.Color.White
         Me.ButtonVirus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonVirus.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.ButtonVirus.Location = New System.Drawing.Point(0, 77)
         Me.ButtonVirus.Name = "ButtonVirus"
+        Me.HelpProvider1.SetShowHelp(Me.ButtonVirus, True)
         Me.ButtonVirus.Size = New System.Drawing.Size(131, 62)
         Me.ButtonVirus.TabIndex = 0
         Me.ButtonVirus.Text = "Batch Virus"
         Me.ButtonVirus.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ButtonVirus.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Cyan
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(150, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.HelpProvider1.SetShowHelp(Me.Panel1, True)
+        Me.Panel1.Size = New System.Drawing.Size(641, 10)
+        Me.Panel1.TabIndex = 5
+        '
+        'Panel3
+        '
+        Me.Panel3.Location = New System.Drawing.Point(407, 12)
+        Me.Panel3.Name = "Panel3"
+        Me.HelpProvider1.SetShowHelp(Me.Panel3, True)
+        Me.Panel3.Size = New System.Drawing.Size(225, 50)
+        Me.Panel3.TabIndex = 32
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel4.Controls.Add(Me.Button3)
+        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Controls.Add(Me.PictureBox1)
+        Me.Panel4.Location = New System.Drawing.Point(150, 12)
+        Me.Panel4.Name = "Panel4"
+        Me.HelpProvider1.SetShowHelp(Me.Panel4, True)
+        Me.Panel4.Size = New System.Drawing.Size(641, 47)
+        Me.Panel4.TabIndex = 32
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1250668
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 27.75!)
+        Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button3.Location = New System.Drawing.Point(581, 4)
+        Me.Button3.Name = "Button3"
+        Me.HelpProvider1.SetShowHelp(Me.Button3, True)
+        Me.Button3.Size = New System.Drawing.Size(21, 18)
+        Me.Button3.TabIndex = 33
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._63373
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button2.Location = New System.Drawing.Point(608, 4)
+        Me.Button2.Name = "Button2"
+        Me.HelpProvider1.SetShowHelp(Me.Button2, True)
+        Me.Button2.Size = New System.Drawing.Size(21, 18)
+        Me.Button2.TabIndex = 32
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.PictureBox1.Image = Global.WindowsApp4.My.Resources.Resources.BRILLIANT_ARTS_LOGO_MAIN
+        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.HelpProvider1.SetShowHelp(Me.PictureBox1, True)
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
+        'BatchVault1
+        '
+        Me.BatchVault1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BatchVault1.Location = New System.Drawing.Point(150, 77)
+        Me.BatchVault1.Name = "BatchVault1"
+        Me.BatchVault1.Size = New System.Drawing.Size(641, 565)
+        Me.BatchVault1.TabIndex = 33
+        Me.BatchVault1.Timer1 = Nothing
         '
         'Viral
         '
@@ -228,16 +256,20 @@ Partial Class Viral
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(791, 645)
+        Me.Controls.Add(Me.BatchVault1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.ForeColor = System.Drawing.Color.DarkRed
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Viral"
-        Me.Text = "WX3"
+        Me.HelpProvider1.SetShowHelp(Me, True)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "WOX3IE"
+        Me.TransparencyKey = System.Drawing.Color.Goldenrod
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -266,8 +298,5 @@ Partial Class Viral
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
-
-    Public Sub New(virus2 As Virusly)
-        'Me.Virus2 = virus2
-    End Sub
+    Friend WithEvents BatchVault1 As Global.WindowsApp4.BatchVault
 End Class

@@ -1,4 +1,4 @@
-﻿Public Class Virusly
+﻿Public Class BatchVault
     Private filesaved As Integer
     Public Property Timer1 As Object
 
@@ -1450,5 +1450,6 @@
         RichTextBox1.Text += Environment.NewLine + "rem ---------------------------------"
     End Sub
 End Class
+
 
 
