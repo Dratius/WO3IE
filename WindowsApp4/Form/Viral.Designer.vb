@@ -44,8 +44,8 @@ Partial Class Viral
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
-        Me.BatchVault2 = New Global.WindowsApp4.BatchVault()
-        Me.Ransomwares2 = New Global.WindowsApp4.Ransomwares()
+        Me.Ransomwares2 = New WindowsApp4.Ransomwares()
+        Me.BatchVault2 = New WindowsApp4.BatchVault()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -112,6 +112,7 @@ Partial Class Viral
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Freestyle Script", 26.25!)
+        Me.Label1.ForeColor = System.Drawing.Color.DarkGoldenrod
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
@@ -242,6 +243,13 @@ Partial Class Viral
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
         '
+        'Ransomwares2
+        '
+        Me.Ransomwares2.Location = New System.Drawing.Point(150, 77)
+        Me.Ransomwares2.Name = "Ransomwares2"
+        Me.Ransomwares2.Size = New System.Drawing.Size(641, 565)
+        Me.Ransomwares2.TabIndex = 34
+        '
         'BatchVault2
         '
         Me.BatchVault2.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -250,13 +258,6 @@ Partial Class Viral
         Me.BatchVault2.Size = New System.Drawing.Size(641, 565)
         Me.BatchVault2.TabIndex = 33
         Me.BatchVault2.Timer1 = Nothing
-        '
-        'Ransomwares2
-        '
-        Me.Ransomwares2.Location = New System.Drawing.Point(150, 77)
-        Me.Ransomwares2.Name = "Ransomwares2"
-        Me.Ransomwares2.Size = New System.Drawing.Size(641, 565)
-        Me.Ransomwares2.TabIndex = 34
         '
         'Viral
         '

@@ -105,6 +105,7 @@ Partial Class Ransomwares
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(65, 20)
         Me.TextBox2.TabIndex = 3
+        Me.TextBox2.Text = "0"
         '
         'Button2
         '
@@ -122,6 +123,7 @@ Partial Class Ransomwares
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(61, 20)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = "0"
         '
         'Button1
         '
