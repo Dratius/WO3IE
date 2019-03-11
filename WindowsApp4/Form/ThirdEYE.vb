@@ -15,12 +15,7 @@
     Private Sub ThirdEYE_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyData = Keys.Alt + Keys.F4 Then
             MessageBox.Show("Lol!!!😅 😆 😄 You Can't Close Me", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-        If Rens.CheckBox2.Checked = True Then
             e.Handled = True
-            Label5.Text = "TEST GOOD CHECKED"
-        Else
-            Label5.Text = "TEST FAILED"
         End If
     End Sub
 

@@ -24,7 +24,6 @@ Partial Class Ransomwares
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -34,6 +33,8 @@ Partial Class Ransomwares
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -52,7 +53,8 @@ Partial Class Ransomwares
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.CheckBox2)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.Button4)
         Me.TabPage1.Controls.Add(Me.CheckBox1)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.TextBox2)
@@ -66,17 +68,6 @@ Partial Class Ransomwares
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Font = New System.Drawing.Font("OCR A Extended", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(79, 172)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(242, 17)
-        Me.CheckBox2.TabIndex = 6
-        Me.CheckBox2.Text = "Disable Alt + F4 (Exit App)"
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
@@ -169,6 +160,24 @@ Partial Class Ransomwares
         Me.Button3.Text = "LIVE VIEW"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(284, 188)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(65, 20)
+        Me.TextBox3.TabIndex = 7
+        Me.TextBox3.Text = "0"
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("OCR A Extended", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(284, 214)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(65, 38)
+        Me.Button4.TabIndex = 6
+        Me.Button4.Text = "Add Minutes"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Ransomwares
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -194,6 +203,7 @@ Partial Class Ransomwares
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Button4 As Button
 End Class
