@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Wilder", "WindowsApp4\Wilder.vbproj", "{271B6FEC-A802-4216-A285-1F47C0109058}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CRYP", "E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\Project\Plugins\CRYP\CRYP.vbproj", "{AF0885E4-9E3B-49CA-9F13-0F869E8BF89D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DDOS", "E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\Project\Plugins\DDOS\DDOS.vbproj", "{F56E4E1A-AB7A-4494-ACB9-8757164B0524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{271B6FEC-A802-4216-A285-1F47C0109058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{271B6FEC-A802-4216-A285-1F47C0109058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{271B6FEC-A802-4216-A285-1F47C0109058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0885E4-9E3B-49CA-9F13-0F869E8BF89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0885E4-9E3B-49CA-9F13-0F869E8BF89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0885E4-9E3B-49CA-9F13-0F869E8BF89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0885E4-9E3B-49CA-9F13-0F869E8BF89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56E4E1A-AB7A-4494-ACB9-8757164B0524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56E4E1A-AB7A-4494-ACB9-8757164B0524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56E4E1A-AB7A-4494-ACB9-8757164B0524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56E4E1A-AB7A-4494-ACB9-8757164B0524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
