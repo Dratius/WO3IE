@@ -79,4 +79,16 @@ Public Class Ransomwares
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
 
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If minute = 0 Then
+            hour = hour - 1
+            minute = 59
+        ElseIf second = 0 Then
+            minute = minute - 1
+            second = 59
+        Else
+            second = second - 1
+        End If
+    End Sub
 End Class
