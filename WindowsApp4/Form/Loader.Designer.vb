@@ -32,6 +32,7 @@ Partial Class Loader
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Timersec = New System.Windows.Forms.Timer(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,7 +73,7 @@ Partial Class Loader
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 300
+        Me.Timer1.Interval = 200
         '
         'Label3
         '
@@ -113,6 +114,19 @@ Partial Class Loader
         'Timersec
         '
         Me.Timersec.Enabled = True
+        Me.Timersec.Interval = 70
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label6.Location = New System.Drawing.Point(95, 19)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 18)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Visible = False
         '
         'Loader
         '
@@ -121,6 +135,7 @@ Partial Class Loader
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -145,4 +160,5 @@ Partial Class Loader
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Timersec As Timer
+    Friend WithEvents Label6 As Label
 End Class

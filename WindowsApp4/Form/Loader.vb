@@ -1,4 +1,7 @@
-﻿Public Class Loader
+﻿Imports SpeechLib
+Public Class Loader
+    Public WithEvents vox As New SpVoice
+    Public RateOfSpeech As Integer = 0
     Sub TypingText(ByVal Word As String)
         Static NextChar As Integer
         Dim Length As Integer
@@ -44,6 +47,7 @@
         ProgressBar1.BackColor = Color.White
         If ProgressBar1.Value = 100% Then
             Timer1.Enabled = False
+            vox.Speak("", SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
             Viral.Show()
             Me.Close()
         Else
@@ -56,6 +60,9 @@
     End Sub
 
     Private Sub Timersec_Tick(sender As Object, e As EventArgs) Handles Timersec.Tick
+        vox.Rate = RateOfSpeech
         TypingText("This Section is Filled with Open Malwares, created with no intention" & vbCrLf & "of bieng used maliciosly as any damage caused upon your system Or" & vbCrLf & "any other, we would not be hold up to any responsibility from your" & vbCrLf & "actions.")
+        vox.Speak(Label6.Text, SpeechVoiceSpeakFlags.SVSFlagsAsync)
+        Label6.Text = "This Section is Filled with Open Malwares, created with no intention of bieng used maliciosly as any damage caused upon your system or any other, we would not be hold up to any responsibility from your actions."
     End Sub
 End Class
