@@ -32,6 +32,7 @@ Partial Class Viral
         Me.EventLog1 = New System.Diagnostics.EventLog()
         Me.PanelLeft = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -44,8 +45,9 @@ Partial Class Viral
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
-        Me.Ransomwares2 = New Global.WindowsApp4.Ransomwares()
-        Me.BatchVault2 = New Global.WindowsApp4.BatchVault()
+        Me.BatchVault1 = New Global.WindowsApp4.BatchVault()
+        Me.Ransomwares1 = New Global.WindowsApp4.Ransomwares()
+        Me.Crypotography1 = New Global.WindowsApp4.Crypotography()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -76,6 +78,7 @@ Partial Class Viral
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button7)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Button1)
@@ -88,6 +91,27 @@ Partial Class Viral
         Me.HelpProvider1.SetShowHelp(Me.Panel2, True)
         Me.Panel2.Size = New System.Drawing.Size(150, 645)
         Me.Panel2.TabIndex = 1
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Button4.BackgroundImage = Global.WindowsApp4.My.Resources.Resources._1564528
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tan
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button4.Location = New System.Drawing.Point(0, 213)
+        Me.Button4.Name = "Button4"
+        Me.HelpProvider1.SetShowHelp(Me.Button4, True)
+        Me.Button4.Size = New System.Drawing.Size(131, 62)
+        Me.Button4.TabIndex = 34
+        Me.Button4.Text = "Cryptography"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button7
         '
@@ -112,7 +136,7 @@ Partial Class Viral
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Freestyle Script", 26.25!)
-        Me.Label1.ForeColor = System.Drawing.Color.DarkGoldenrod
+        Me.Label1.ForeColor = System.Drawing.Color.Goldenrod
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
@@ -243,21 +267,28 @@ Partial Class Viral
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
         '
-        'Ransomwares2
+        'BatchVault1
         '
-        Me.Ransomwares2.Location = New System.Drawing.Point(150, 77)
-        Me.Ransomwares2.Name = "Ransomwares2"
-        Me.Ransomwares2.Size = New System.Drawing.Size(641, 565)
-        Me.Ransomwares2.TabIndex = 34
+        Me.BatchVault1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BatchVault1.Location = New System.Drawing.Point(150, 77)
+        Me.BatchVault1.Name = "BatchVault1"
+        Me.BatchVault1.Size = New System.Drawing.Size(641, 565)
+        Me.BatchVault1.TabIndex = 33
+        Me.BatchVault1.Timer1 = Nothing
         '
-        'BatchVault2
+        'Ransomwares1
         '
-        Me.BatchVault2.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.BatchVault2.Location = New System.Drawing.Point(150, 77)
-        Me.BatchVault2.Name = "BatchVault2"
-        Me.BatchVault2.Size = New System.Drawing.Size(641, 565)
-        Me.BatchVault2.TabIndex = 33
-        Me.BatchVault2.Timer1 = Nothing
+        Me.Ransomwares1.Location = New System.Drawing.Point(150, 77)
+        Me.Ransomwares1.Name = "Ransomwares1"
+        Me.Ransomwares1.Size = New System.Drawing.Size(641, 565)
+        Me.Ransomwares1.TabIndex = 34
+        '
+        'Crypotography1
+        '
+        Me.Crypotography1.Location = New System.Drawing.Point(150, 77)
+        Me.Crypotography1.Name = "Crypotography1"
+        Me.Crypotography1.Size = New System.Drawing.Size(641, 565)
+        Me.Crypotography1.TabIndex = 35
         '
         'Viral
         '
@@ -265,8 +296,9 @@ Partial Class Viral
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(791, 645)
-        Me.Controls.Add(Me.Ransomwares2)
-        Me.Controls.Add(Me.BatchVault2)
+        Me.Controls.Add(Me.Crypotography1)
+        Me.Controls.Add(Me.Ransomwares1)
+        Me.Controls.Add(Me.BatchVault1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -308,6 +340,8 @@ Partial Class Viral
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button7 As Button
-    Friend WithEvents Ransomwares2 As Global.WindowsApp4.Ransomwares
-    Friend WithEvents BatchVault2 As Global.WindowsApp4.BatchVault
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Crypotography1 As Global.WindowsApp4.Crypotography
+    Friend WithEvents Ransomwares1 As Global.WindowsApp4.Ransomwares
+    Friend WithEvents BatchVault1 As Global.WindowsApp4.BatchVault
 End Class
