@@ -79,8 +79,8 @@ Public Class Viral
         Button7.Visible = False
         'Button2.Visible = True
         Crypotography1.BringToFront()
-        PanelLeft.Height = Button1.Height
-        PanelLeft.Top = Button1.Top
+        PanelLeft.Height = Button4.Height
+        PanelLeft.Top = Button4.Top
         Flash()
     End Sub
 End Class

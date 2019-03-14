@@ -29,7 +29,6 @@ Partial Class Crypotography
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.txtLog = New System.Windows.Forms.TextBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -45,6 +44,7 @@ Partial Class Crypotography
         Me.btnDecrypt = New System.Windows.Forms.Button()
         Me.btnEncrypt = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.txtLog = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,25 +53,25 @@ Partial Class Crypotography
         Me.Button1.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(27, 73)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 25)
+        Me.Button1.Size = New System.Drawing.Size(158, 25)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "File to Encrypt"
+        Me.Button1.Text = "File to Encrypt/ Decrypt"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Chaparral Pro", 9.749999!)
-        Me.TextBox2.Location = New System.Drawing.Point(140, 73)
+        Me.TextBox2.Location = New System.Drawing.Point(191, 154)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(485, 23)
+        Me.TextBox2.Size = New System.Drawing.Size(430, 23)
         Me.TextBox2.TabIndex = 29
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Chaparral Pro", 9.749999!)
-        Me.TextBox1.Location = New System.Drawing.Point(136, 151)
+        Me.TextBox1.Location = New System.Drawing.Point(191, 73)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(485, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(430, 23)
         Me.TextBox1.TabIndex = 31
         '
         'Button2
@@ -79,9 +79,9 @@ Partial Class Crypotography
         Me.Button2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(27, 151)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 25)
+        Me.Button2.Size = New System.Drawing.Size(158, 25)
         Me.Button2.TabIndex = 30
-        Me.Button2.Text = "Encrypt to File"
+        Me.Button2.Text = "Encrypt/ Decrypt to File"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -89,7 +89,7 @@ Partial Class Crypotography
         Me.Button3.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(27, 104)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 41)
+        Me.Button3.Size = New System.Drawing.Size(158, 41)
         Me.Button3.TabIndex = 32
         Me.Button3.Text = "Swap"
         Me.Button3.UseVisualStyleBackColor = True
@@ -97,20 +97,6 @@ Partial Class Crypotography
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'txtLog
-        '
-        Me.txtLog.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtLog.Font = New System.Drawing.Font("Rockwell", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLog.Location = New System.Drawing.Point(14, 252)
-        Me.txtLog.Multiline = True
-        Me.txtLog.Name = "txtLog"
-        Me.txtLog.ReadOnly = True
-        Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtLog.Size = New System.Drawing.Size(607, 104)
-        Me.txtLog.TabIndex = 33
-        Me.txtLog.Text = "LogFile"
         '
         'RichTextBox1
         '
@@ -266,6 +252,20 @@ Partial Class Crypotography
         Me.btnEncrypt.TabIndex = 34
         Me.btnEncrypt.Text = "Encrypt"
         '
+        'txtLog
+        '
+        Me.txtLog.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtLog.Font = New System.Drawing.Font("Rockwell", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLog.Location = New System.Drawing.Point(14, 252)
+        Me.txtLog.Multiline = True
+        Me.txtLog.Name = "txtLog"
+        Me.txtLog.ReadOnly = True
+        Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtLog.Size = New System.Drawing.Size(607, 104)
+        Me.txtLog.TabIndex = 33
+        Me.txtLog.Text = "LogFile"
+        '
         'Crypotography
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -294,7 +294,6 @@ Partial Class Crypotography
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents txtLog As TextBox
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents GroupBox1 As GroupBox
@@ -310,4 +309,5 @@ Partial Class Crypotography
     Friend WithEvents btnDecrypt As Button
     Friend WithEvents btnEncrypt As Button
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents txtLog As TextBox
 End Class

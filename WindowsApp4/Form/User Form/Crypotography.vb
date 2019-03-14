@@ -99,16 +99,4 @@ Public Class Crypotography
         End With
     End Sub
 
-    Private Sub Watcher_Created(ByVal sender As Object, ByVal e As System.IO.FileSystemEventArgs) Handles Watcher.Created, Watcher.Deleted, Watcher.Changed
-        txtLog.AppendText(e.ChangeType.ToString & " <--> " & e.Name & ControlChars.CrLf)
-    End Sub
-
-    Private Sub Watcher_Renamed(ByVal sender As Object, ByVal e As System.IO.RenamedEventArgs) Handles Watcher.Renamed
-        txtLog.AppendText(e.ChangeType.ToString & " <--> " & e.Name & ControlChars.CrLf)
-    End Sub
-
-    Private Sub Watcher_Error(ByVal sender As Object, ByVal e As System.IO.ErrorEventArgs) Handles Watcher.Error
-        txtLog.AppendText(e.GetException.Message.ToString & vbCrLf)
-    End Sub
-
 End Class

@@ -61,8 +61,8 @@ Public Class Loader
 
     Private Sub Timersec_Tick(sender As Object, e As EventArgs) Handles Timersec.Tick
         vox.Rate = RateOfSpeech
-        TypingText("This Section is Filled with Open Malwares, created with no intention" & vbCrLf & "of bieng used maliciosly as any damage caused upon your system Or" & vbCrLf & "any other, we would not be hold up to any responsibility from your" & vbCrLf & "actions.")
+        TypingText("This Section is Filled with Open Malwares, created with no intention" & vbCrLf & "of being used maliciously as any damage caused upon your system Or" & vbCrLf & "any other, we would not be hold up to any responsibility from your" & vbCrLf & "actions.")
         vox.Speak(Label6.Text, SpeechVoiceSpeakFlags.SVSFlagsAsync)
-        Label6.Text = "This Section is Filled with Open Malwares, created with no intention of bieng used maliciosly as any damage caused upon your system or any other, we would not be hold up to any responsibility from your actions."
+        Label6.Text = "WARNING: This Section is Filled with Open Malwares, created with no intention of being used maliciously as any damage caused upon your system or any other, we would not be hold up to any responsibility from your actions."
     End Sub
 End Class

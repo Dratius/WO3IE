@@ -1,44 +1,61 @@
 ﻿Imports System.Text.RegularExpressions
 Public Class Ransomwares
+    Dim days As Double
     Dim hour As Double
     Dim minute As Double
     Dim second As Double
-    Dim i As Integer
-    Dim strmsg As String
+    Private TargetDT As DateTime
+    Private CountDownFrom As TimeSpan
+    Private CompTime As System.Int32
 
-    Private Sub Ransomwares_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'strmsg = "I want to play a game with you. Let me explain the rules:" + Environment.NewLine + "Your personal files are being deleted. Your photos, videos, documents, etc..." + Environment.NewLine + "But, don't worry! It will only happen if you don't comply." + Environment.NewLine + "Howeever I've already encrypted your personal files, so you cannot access them." + Environment.NewLine + Environment.NewLine + "Every hour I select some of them to delete permanently," + Environment.NewLine + "therefore I won't be able to access them, either." + Environment.NewLine + "Are you familiar with the concept of exponential growth? Let me help you out." + Environment.NewLine + "It starts out slowly then increases rapidly." + Environment.NewLine + "During the first 24hour you will only lose a few files," + Environment.NewLine + "the second day a few hundred, the third day a few thousand, and so on." + Environment.NewLine + Environment.NewLine + "If you turn off your computer or try to close me, when I start next time" + Environment.NewLine + "you will get 1000 files deleted as a punishment." + Environment.NewLine + "Yes you will want me to start next time, since I am the only one that is capable to " + Environment.NewLine + "decrypt your personal data for you." + Environment.NewLine + "                         Now, let's start and enjoy our little game together!"
-        'Timer1.Enabled = True
+    Private Sub frmSinglePlayer_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        TextBox1.Text = 1
+        TextBox2.Text = 10
+        TextBox3.Text = 1
+        TextBox4.Text = 15
+    End Sub
+
+    Private Sub tmrCountdown_Tick(sender As Object, e As System.EventArgs) Handles tmrCountdown.Tick
+        CountDownFrom = TargetDT - DateTime.Now
+        Dim output As TimeSpan = New TimeSpan(CountDownFrom.Days, CountDownFrom.Hours, CountDownFrom.Minutes, CountDownFrom.Seconds)
+        ThirdEYE.Label2.Text = output.ToString
+
+        If (CountDownFrom.Ticks < 0) Then
+            tmrCountdown.Stop()
+        End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If TextBox1.Text.Trim = "" Then
-            MessageBox.Show("Fill in an Hour (Digits Only)", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If TextBox1.Text.Trim = "" Or TextBox2.Text.Trim = "" Or TextBox3.Text.Trim = "" Or TextBox4.Text.Trim = "" Then
+            MessageBox.Show("Input, Please!!! (Digits Only)", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
-        hour = TextBox1.Text
-        ThirdEYE.Label2.Text = hour
+        TargetDT = DateTime.Now
+        hour = System.Convert.ToDouble(TextBox1.Text)
+        minute = System.Convert.ToDouble(TextBox2.Text)
+        second = System.Convert.ToDouble(TextBox4.Text)
+        days = System.Convert.ToDouble(TextBox3.Text)
+        TargetDT = TargetDT.AddHours(hour)
+        TargetDT = TargetDT.AddMinutes(minute)
+        TargetDT = TargetDT.AddSeconds(second)
+        TargetDT = TargetDT.AddDays(days)
+        tmrCountdown.Start()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox2.Text.Trim = "" Then
-            MessageBox.Show("Please, Input a Minute (Digits Only)", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
-        End If
-        minute = TextBox2.Text
-        ThirdEYE.Label4.Text = minute
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
-            second = 60
-            ThirdEYE.Label1.Text = second
+            CompTime = Environment.TickCount
+            Timer1.Start()
         Else
-            ThirdEYE.Label1.Text = "00"
+            Timer1.Stop()
         End If
     End Sub
 
-    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+    Private Sub TextBoxes_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress, TextBox2.KeyPress, TextBox3.KeyPress, TextBox4.KeyPress
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
         End If
@@ -59,12 +76,6 @@ Public Class Ransomwares
         ThirdEYE.Show()
     End Sub
 
-    Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
-        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
-
     Private Sub TextBox2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
         Dim digitsOnly As Regex = New Regex("[^\d]")
         TextBox2.Text = digitsOnly.Replace(TextBox2.Text, "")
@@ -76,19 +87,34 @@ Public Class Ransomwares
         End If
     End Sub
 
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        Dim CurTickValue As System.Int32 = Environment.TickCount
+        Dim Difference As System.Int32 = CurTickValue - CompTime
+
+        Dim Days As System.Int32
+        Dim Hours As System.Int32
+        Dim Minutes As System.Int32
+        Dim Seconds As System.Int32
+
+        Days = (Difference / (86400 * 999)) Mod 365
+        Hours = (Difference / (3600 * 999)) Mod 24
+        Minutes = (Difference / (60 * 999)) Mod 60
+        Seconds = (Difference / 999) Mod 60
+
+        ThirdEYE.Label1.Text = String.Format("{0} Days, {1} hours, {2} minutes {3} seconds",
+                                CStr(Days),
+                                CStr(Hours),
+                                CStr(Minutes),
+                                CStr(Seconds))
 
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If minute = 0 Then
-            hour = hour - 1
-            minute = 59
-        ElseIf second = 0 Then
-            minute = minute - 1
-            second = 59
-        Else
-            second = second - 1
-        End If
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Timer1.Stop()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        tmrCountdown.Stop()
     End Sub
 End Class

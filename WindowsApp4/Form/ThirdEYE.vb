@@ -8,7 +8,7 @@
 
     End Sub
 
-    Private Sub Label1_VisibleChanged(sender As Object, e As EventArgs) Handles Label1.VisibleChanged
+    Private Sub Label1_VisibleChanged(sender As Object, e As EventArgs)
 
     End Sub
 
