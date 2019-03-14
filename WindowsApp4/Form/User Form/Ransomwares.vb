@@ -7,6 +7,9 @@ Public Class Ransomwares
     Private TargetDT As DateTime
     Private CountDownFrom As TimeSpan
     Private CompTime As System.Int32
+    Public M As Main
+    Public OK As Boolean
+    Public ofd As New OpenFileDialog
 
     Private Sub frmSinglePlayer_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         TextBox1.Text = 1
@@ -116,5 +119,27 @@ Public Class Ransomwares
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         tmrCountdown.Stop()
+        tmrCountdown.Start()
+    End Sub
+
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Try
+            With ofd
+                .Filter = "Image File(*.JPEG;*.JPG)|*.JPEG;*.JPG;|All files (*.*)|*.*"
+                .Title = "Select a Image File"
+                .InitialDirectory = Application.StartupPath
+            End With
+
+            If ofd.ShowDialog = Windows.Forms.DialogResult.OK Then
+                PictureBox1.ImageLocation = ofd.FileName
+                PictureBox1.BackgroundImage = PictureBox1.Image
+                ThirdEYE.BackgroundImage = PictureBox1.BackgroundImage
+            Else
+                PictureBox1.ImageLocation = Nothing
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        End Try
     End Sub
 End Class

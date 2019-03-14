@@ -64,7 +64,7 @@ Public Class Crypotography
         End If
         btn.Enabled = True
     End Sub
-    Private Sub rb_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbRijndael.Click, rbDES.Click, rbRC2.Click, rbTripleDES.Click, rbXor.Click
+    Private Sub Rb_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles rbRijndael.Click, rbDES.Click, rbRC2.Click, rbTripleDES.Click, rbXor.Click
         rbProviderClick = CType(DirectCast(sender, RadioButton).Tag, Crypter.CryptAlgorithms)
     End Sub
 

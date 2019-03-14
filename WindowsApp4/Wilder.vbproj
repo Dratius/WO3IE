@@ -96,15 +96,6 @@
     <Reference Include="Mono.Cecil">
       <HintPath>E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Cecil.Mdb">
-      <HintPath>E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Pdb">
-      <HintPath>E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Rocks">
-      <HintPath>E:\Project Files\Visual Studio\Apps\Lime-RAT-master\Lime-RAT-master\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -234,9 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
@@ -288,7 +279,6 @@
   <ItemGroup>
     <None Include="Resources\BRILLIANT ARTS LOGO MAIN1.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1564456.png" />
   </ItemGroup>
@@ -399,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1250668.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image00004.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

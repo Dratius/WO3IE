@@ -25,7 +25,6 @@ Partial Class Viral
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Viral))
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
@@ -45,9 +44,9 @@ Partial Class Viral
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
-        Me.BatchVault1 = New Global.WindowsApp4.BatchVault()
-        Me.Ransomwares1 = New Global.WindowsApp4.Ransomwares()
         Me.Crypotography1 = New Global.WindowsApp4.Crypotography()
+        Me.Ransomwares1 = New Global.WindowsApp4.Ransomwares()
+        Me.BatchVault1 = New Global.WindowsApp4.BatchVault()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -267,14 +266,12 @@ Partial Class Viral
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
         '
-        'BatchVault1
+        'Crypotography1
         '
-        Me.BatchVault1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.BatchVault1.Location = New System.Drawing.Point(150, 77)
-        Me.BatchVault1.Name = "BatchVault1"
-        Me.BatchVault1.Size = New System.Drawing.Size(641, 565)
-        Me.BatchVault1.TabIndex = 33
-        Me.BatchVault1.Timer1 = Nothing
+        Me.Crypotography1.Location = New System.Drawing.Point(150, 77)
+        Me.Crypotography1.Name = "Crypotography1"
+        Me.Crypotography1.Size = New System.Drawing.Size(641, 565)
+        Me.Crypotography1.TabIndex = 35
         '
         'Ransomwares1
         '
@@ -283,12 +280,14 @@ Partial Class Viral
         Me.Ransomwares1.Size = New System.Drawing.Size(641, 565)
         Me.Ransomwares1.TabIndex = 34
         '
-        'Crypotography1
+        'BatchVault1
         '
-        Me.Crypotography1.Location = New System.Drawing.Point(150, 77)
-        Me.Crypotography1.Name = "Crypotography1"
-        Me.Crypotography1.Size = New System.Drawing.Size(641, 565)
-        Me.Crypotography1.TabIndex = 35
+        Me.BatchVault1.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BatchVault1.Location = New System.Drawing.Point(150, 77)
+        Me.BatchVault1.Name = "BatchVault1"
+        Me.BatchVault1.Size = New System.Drawing.Size(641, 565)
+        Me.BatchVault1.TabIndex = 33
+        Me.BatchVault1.Timer1 = Nothing
         '
         'Viral
         '
@@ -305,7 +304,6 @@ Partial Class Viral
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.ForeColor = System.Drawing.Color.DarkRed
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Viral"
         Me.HelpProvider1.SetShowHelp(Me, True)
