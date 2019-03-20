@@ -127,21 +127,27 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Android.Designer.vb">
+      <DependentUpon>Android.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Android.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Classes\ApplicationEvents.vb" />
     <Compile Include="Classes\ButtonZ.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Crypter.vb" />
-    <Compile Include="Form\User Form\Crypotography.Designer.vb">
+    <Compile Include="Form\User Form Malware\Crypotography.Designer.vb">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\User Form\Crypotography.vb">
+    <Compile Include="Form\User Form Malware\Crypotography.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\User Form\BatchVault.Designer.vb">
+    <Compile Include="Form\User Form Malware\BatchVault.Designer.vb">
       <DependentUpon>BatchVault.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\User Form\BatchVault.vb">
+    <Compile Include="Form\User Form Malware\BatchVault.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form\Viral.vb">
@@ -193,22 +199,25 @@
     <Compile Include="Form\ThirdEYE.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\User Form\Ransomwares.Designer.vb">
+    <Compile Include="Form\User Form Malware\Ransomwares.Designer.vb">
       <DependentUpon>Ransomwares.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\User Form\Ransomwares.vb">
+    <Compile Include="Form\User Form Malware\Ransomwares.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Classes\WindowsApp4.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form\User Form\BatchVault.resx">
+    <EmbeddedResource Include="Android.resx">
+      <DependentUpon>Android.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Malware\BatchVault.resx">
       <DependentUpon>BatchVault.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Crypotography.resx">
+    <EmbeddedResource Include="Form\User Form Malware\Crypotography.resx">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Viral.af.resx">
@@ -235,7 +244,7 @@
     <EmbeddedResource Include="Form\ThirdEYE.resx">
       <DependentUpon>ThirdEYE.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\User Form\Ransomwares.resx">
+    <EmbeddedResource Include="Form\User Form Malware\Ransomwares.resx">
       <DependentUpon>Ransomwares.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -392,6 +401,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image00004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\User Form Android\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

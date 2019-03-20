@@ -30,23 +30,23 @@ Partial Class Main
         Me.Timerline = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -127,41 +127,6 @@ Partial Class Main
         Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button4.UseVisualStyleBackColor = False
         '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Silver
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Button3.Image = Global.WindowsApp4.My.Resources.Resources._1564588
-        Me.Button3.Location = New System.Drawing.Point(3, 340)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(290, 141)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Android Fix"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.Silver
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Button2.Image = Global.WindowsApp4.My.Resources.Resources._1564501
-        Me.Button2.Location = New System.Drawing.Point(421, 80)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(290, 141)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Windows Tools"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Label3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -175,23 +140,6 @@ Partial Class Main
         Me.Label3.TabIndex = 5
         Me.Label3.Text = " VAULT"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Silver
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Button1.Image = Global.WindowsApp4.My.Resources.Resources._1564465
-        Me.Button1.Location = New System.Drawing.Point(0, 80)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(290, 141)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Malwares"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel3
         '
@@ -239,17 +187,6 @@ Partial Class Main
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "WX3 DEVs"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.WindowsApp4.My.Resources.Resources.BRILLIANT_ARTS_LOGO_MAIN
-        Me.PictureBox1.Location = New System.Drawing.Point(110, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 32
-        Me.PictureBox1.TabStop = False
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -286,6 +223,69 @@ Partial Class Main
         Me.Panel6.Size = New System.Drawing.Size(200, 496)
         Me.Panel6.TabIndex = 8
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.WindowsApp4.My.Resources.Resources.BRILLIANT_ARTS_LOGO_MAIN
+        Me.PictureBox1.Location = New System.Drawing.Point(110, 14)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 32
+        Me.PictureBox1.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Silver
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Button3.Image = Global.WindowsApp4.My.Resources.Resources._1564588
+        Me.Button3.Location = New System.Drawing.Point(3, 340)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(290, 141)
+        Me.Button3.TabIndex = 7
+        Me.Button3.Text = "Android Fix"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.BackColor = System.Drawing.Color.Silver
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Button2.Image = Global.WindowsApp4.My.Resources.Resources._1564501
+        Me.Button2.Location = New System.Drawing.Point(421, 80)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(290, 141)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Windows Tools"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Silver
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSpringGreen
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Button1.Image = Global.WindowsApp4.My.Resources.Resources._1564465
+        Me.Button1.Location = New System.Drawing.Point(0, 80)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(290, 141)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Malwares"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 45.0!)
@@ -306,9 +306,9 @@ Partial Class Main
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
