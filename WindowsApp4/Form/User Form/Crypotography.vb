@@ -83,7 +83,7 @@ Public Class Crypotography
             .SetToolTip(Me.rbTripleDES, "192 bit Crypting")
             .SetToolTip(Me.rbDES, "64 bits Crypting")
             .SetToolTip(Me.rbRC2, "128 bits Crypting")
-            .SetToolTip(Me.rbXor, "256 bits Crypting" & vbCrLf & "can be modified in SourceCode" & vbCrLf & vbCrLf & "Written by Ted Schopenhouer")
+            .SetToolTip(Me.rbXor, "256 bits Crypting" & vbCrLf & "can be modified in SourceCode" & vbCrLf & vbCrLf & "")
             .SetToolTip(Me.txtIV, "Sets the initialization vector (IV) for the symmetric algorithm")
             .SetToolTip(Me.txtKey, "Sets the secret key for the symmetric algorithm.")
             .SetToolTip(Me.Button3, "Swap FileNameIn to FileNameOut" & vbCrLf & "and" & vbCrLf & "Swap FileNameOut to FileNameIn")

@@ -10,8 +10,10 @@ Public Class Ransomwares
     Public M As Main
     Public OK As Boolean
     Public ofd As New OpenFileDialog
+    Dim trk As Integer = 100
 
     Private Sub frmSinglePlayer_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ThirdEYE.Timer2.Interval = trk
         TextBox1.Text = 1
         TextBox2.Text = 10
         TextBox3.Text = 1
@@ -52,9 +54,9 @@ Public Class Ransomwares
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
             CompTime = Environment.TickCount
-            Timer1.Start()
+            ThirdEYE.Timer1.Start()
         Else
-            Timer1.Stop()
+            ThirdEYE.Timer1.Stop()
         End If
     End Sub
 
@@ -92,34 +94,14 @@ Public Class Ransomwares
 
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        Dim CurTickValue As System.Int32 = Environment.TickCount
-        Dim Difference As System.Int32 = CurTickValue - CompTime
-
-        Dim Days As System.Int32
-        Dim Hours As System.Int32
-        Dim Minutes As System.Int32
-        Dim Seconds As System.Int32
-
-        Days = (Difference / (86400 * 999)) Mod 365
-        Hours = (Difference / (3600 * 999)) Mod 24
-        Minutes = (Difference / (60 * 999)) Mod 60
-        Seconds = (Difference / 999) Mod 60
-
-        ThirdEYE.Label1.Text = String.Format("{0} Days, {1} hours, {2} minutes {3} seconds",
-                                CStr(Days),
-                                CStr(Hours),
-                                CStr(Minutes),
-                                CStr(Seconds))
-
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Timer1.Stop()
+        ThirdEYE.Timer1.Stop()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         tmrCountdown.Stop()
-        tmrCountdown.Start()
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -141,5 +123,14 @@ Public Class Ransomwares
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        RichTextBox1.Text = ThirdEYE.Label5.Text
+    End Sub
+
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
+        trk = TrackBar1.Value
+
     End Sub
 End Class

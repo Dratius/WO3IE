@@ -49,6 +49,11 @@ Partial Class Ransomwares
         Me.tmrCountdown = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -56,6 +61,7 @@ Partial Class Ransomwares
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -73,6 +79,11 @@ Partial Class Ransomwares
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.TrackBar1)
+        Me.TabPage1.Controls.Add(Me.Button6)
+        Me.TabPage1.Controls.Add(Me.CheckBox2)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.RichTextBox1)
         Me.TabPage1.Controls.Add(Me.Button5)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Font = New System.Drawing.Font("Minion Pro", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -86,7 +97,7 @@ Partial Class Ransomwares
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(15, 202)
+        Me.Button5.Location = New System.Drawing.Point(377, 29)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 15
@@ -326,6 +337,58 @@ Partial Class Ransomwares
         'Timer1
         '
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 216)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(335, 127)
+        Me.RichTextBox1.TabIndex = 16
+        Me.RichTextBox1.Text = ""
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Minion Pro", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(10, 185)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(83, 28)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Message"
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("OCR A Extended", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(377, 220)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(194, 17)
+        Me.CheckBox2.TabIndex = 18
+        Me.CheckBox2.Text = "Enable Scrolling Text"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.PeachPuff
+        Me.Button6.FlatAppearance.BorderSize = 3
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("OCR A Extended", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(377, 313)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(203, 30)
+        Me.Button6.TabIndex = 19
+        Me.Button6.Text = "SEND"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.LargeChange = 50
+        Me.TrackBar1.Location = New System.Drawing.Point(377, 253)
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(194, 45)
+        Me.TrackBar1.SmallChange = 500
+        Me.TrackBar1.TabIndex = 20
+        '
         'Ransomwares
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -335,6 +398,7 @@ Partial Class Ransomwares
         Me.Size = New System.Drawing.Size(641, 565)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -342,6 +406,7 @@ Partial Class Ransomwares
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -372,4 +437,9 @@ Partial Class Ransomwares
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Button6 As Button
+    Friend WithEvents TrackBar1 As TrackBar
 End Class
