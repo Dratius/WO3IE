@@ -36,8 +36,9 @@ Partial Class Android
         Me.ButtonFstbt = New System.Windows.Forms.Button()
         Me.PanelBottom = New System.Windows.Forms.Panel()
         Me.ButtonAdb = New System.Windows.Forms.Button()
-        Me.Adb1 = New Global.WindowsApp4.ADB()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Adb1 = New Global.WindowsApp4.ADB()
+        Me.FastBoot1 = New Global.WindowsApp4.FastBoot()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -201,11 +202,19 @@ Partial Class Android
         Me.Adb1.Size = New System.Drawing.Size(920, 559)
         Me.Adb1.TabIndex = 4
         '
+        'FastBoot1
+        '
+        Me.FastBoot1.Location = New System.Drawing.Point(117, 72)
+        Me.FastBoot1.Name = "FastBoot1"
+        Me.FastBoot1.Size = New System.Drawing.Size(918, 360)
+        Me.FastBoot1.TabIndex = 5
+        '
         'Android
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1037, 631)
+        Me.Controls.Add(Me.FastBoot1)
         Me.Controls.Add(Me.Adb1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -235,4 +244,5 @@ Partial Class Android
     Friend WithEvents lbl_DevInfo As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents lbl_Battery As Label
+    Friend WithEvents FastBoot1 As Global.WindowsApp4.FastBoot
 End Class

@@ -34,11 +34,13 @@
     End Sub
 
     Private Sub ButtonAdb_Click(sender As Object, e As EventArgs) Handles ButtonAdb.Click
+        Adb1.BringToFront()
         PanelBottom.Width = ButtonAdb.Width
         PanelBottom.Left = ButtonAdb.Left
     End Sub
 
     Private Sub ButtonFstbt_Click(sender As Object, e As EventArgs) Handles ButtonFstbt.Click
+        FastBoot1.BringToFront()
         PanelBottom.Width = ButtonFstbt.Width
         PanelBottom.Left = ButtonFstbt.Left
     End Sub

@@ -144,6 +144,12 @@
     <Compile Include="Form\User Form Android\ADB.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Form\User Form Android\FastBoot.Designer.vb">
+      <DependentUpon>FastBoot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Android\FastBoot.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form\User Form Malware\Crypotography.Designer.vb">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\ADB.resx">
       <DependentUpon>ADB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Android\FastBoot.resx">
+      <DependentUpon>FastBoot.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Malware\BatchVault.resx">
       <DependentUpon>BatchVault.vb</DependentUpon>
