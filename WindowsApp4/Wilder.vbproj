@@ -138,6 +138,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Crypter.vb" />
+    <Compile Include="Form\User Form Android\ADB.Designer.vb">
+      <DependentUpon>ADB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Android\ADB.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form\User Form Malware\Crypotography.Designer.vb">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Android.resx">
       <DependentUpon>Android.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Android\ADB.resx">
+      <DependentUpon>ADB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Malware\BatchVault.resx">
       <DependentUpon>BatchVault.vb</DependentUpon>
@@ -402,8 +411,6 @@
   <ItemGroup>
     <None Include="Resources\image00004.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form\User Form Android\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

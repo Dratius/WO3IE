@@ -22,8 +22,13 @@ Partial Class Android
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbl_Battery = New System.Windows.Forms.Label()
+        Me.pb_BatteryBar = New System.Windows.Forms.ProgressBar()
+        Me.lbl_Batt = New System.Windows.Forms.Label()
+        Me.lbl_DevInfo = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -31,6 +36,9 @@ Partial Class Android
         Me.ButtonFstbt = New System.Windows.Forms.Button()
         Me.PanelBottom = New System.Windows.Forms.Panel()
         Me.ButtonAdb = New System.Windows.Forms.Button()
+        Me.Adb1 = New Global.WindowsApp4.ADB()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,16 +48,61 @@ Partial Class Android
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 450)
+        Me.Panel1.Size = New System.Drawing.Size(10, 631)
         Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.lbl_Battery)
+        Me.Panel2.Controls.Add(Me.pb_BatteryBar)
+        Me.Panel2.Controls.Add(Me.lbl_Batt)
+        Me.Panel2.Controls.Add(Me.lbl_DevInfo)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(10, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(107, 450)
+        Me.Panel2.Size = New System.Drawing.Size(107, 631)
         Me.Panel2.TabIndex = 1
+        '
+        'lbl_Battery
+        '
+        Me.lbl_Battery.AutoSize = True
+        Me.lbl_Battery.Font = New System.Drawing.Font("High Tower Text", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Battery.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lbl_Battery.Location = New System.Drawing.Point(40, 59)
+        Me.lbl_Battery.Name = "lbl_Battery"
+        Me.lbl_Battery.Size = New System.Drawing.Size(12, 15)
+        Me.lbl_Battery.TabIndex = 13
+        Me.lbl_Battery.Text = "-"
+        '
+        'pb_BatteryBar
+        '
+        Me.pb_BatteryBar.Location = New System.Drawing.Point(3, 34)
+        Me.pb_BatteryBar.MarqueeAnimationSpeed = 10
+        Me.pb_BatteryBar.Name = "pb_BatteryBar"
+        Me.pb_BatteryBar.Size = New System.Drawing.Size(98, 18)
+        Me.pb_BatteryBar.TabIndex = 12
+        '
+        'lbl_Batt
+        '
+        Me.lbl_Batt.AutoSize = True
+        Me.lbl_Batt.Font = New System.Drawing.Font("High Tower Text", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Batt.ForeColor = System.Drawing.Color.Green
+        Me.lbl_Batt.Location = New System.Drawing.Point(6, 9)
+        Me.lbl_Batt.Name = "lbl_Batt"
+        Me.lbl_Batt.Size = New System.Drawing.Size(78, 22)
+        Me.lbl_Batt.TabIndex = 11
+        Me.lbl_Batt.Text = "Battery :"
+        '
+        'lbl_DevInfo
+        '
+        Me.lbl_DevInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_DevInfo.ForeColor = System.Drawing.Color.Red
+        Me.lbl_DevInfo.Location = New System.Drawing.Point(6, 137)
+        Me.lbl_DevInfo.Name = "lbl_DevInfo"
+        Me.lbl_DevInfo.Size = New System.Drawing.Size(95, 73)
+        Me.lbl_DevInfo.TabIndex = 10
+        Me.lbl_DevInfo.Text = "No Device Detected"
+        Me.lbl_DevInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel3
         '
@@ -62,7 +115,7 @@ Partial Class Android
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(117, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(683, 72)
+        Me.Panel3.Size = New System.Drawing.Size(920, 72)
         Me.Panel3.TabIndex = 3
         '
         'Button5
@@ -138,17 +191,30 @@ Partial Class Android
         Me.ButtonAdb.Text = "ADB"
         Me.ButtonAdb.UseVisualStyleBackColor = True
         '
+        'Adb1
+        '
+        Me.Adb1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Adb1.Location = New System.Drawing.Point(117, 72)
+        Me.Adb1.Name = "Adb1"
+        Me.Adb1.Size = New System.Drawing.Size(920, 559)
+        Me.Adb1.TabIndex = 4
+        '
         'Android
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1037, 631)
+        Me.Controls.Add(Me.Adb1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Android"
         Me.ShowIcon = False
         Me.Text = "Android Tools"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -163,4 +229,10 @@ Partial Class Android
     Friend WithEvents ButtonFstbt As Button
     Friend WithEvents PanelBottom As Panel
     Friend WithEvents ButtonAdb As Button
+    Friend WithEvents Adb1 As Global.WindowsApp4.ADB
+    Friend WithEvents pb_BatteryBar As ProgressBar
+    Friend WithEvents lbl_Batt As Label
+    Friend WithEvents lbl_DevInfo As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents lbl_Battery As Label
 End Class
