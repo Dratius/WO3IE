@@ -45,9 +45,10 @@
         PanelBottom.Left = ButtonFstbt.Left
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        PanelBottom.Width = Button3.Width
-        PanelBottom.Left = Button3.Left
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Buttonpps.Click
+        Interference1.BringToFront()
+        PanelBottom.Width = Buttonpps.Width
+        PanelBottom.Left = Buttonpps.Left
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -60,7 +61,7 @@
         PanelBottom.Left = Button5.Left
     End Sub
 
-    Private Sub Buttonall_MouseHover(sender As Object, e As EventArgs) Handles ButtonFstbt.MouseHover, ButtonAdb.MouseHover, Button5.MouseHover, Button4.MouseHover, Button3.MouseHover
+    Private Sub Buttonall_MouseHover(sender As Object, e As EventArgs) Handles ButtonFstbt.MouseHover, ButtonAdb.MouseHover, Button5.MouseHover, Button4.MouseHover, Buttonpps.MouseHover
 
     End Sub
 

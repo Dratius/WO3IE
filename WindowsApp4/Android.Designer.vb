@@ -32,13 +32,14 @@ Partial Class Android
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Buttonpps = New System.Windows.Forms.Button()
         Me.ButtonFstbt = New System.Windows.Forms.Button()
         Me.PanelBottom = New System.Windows.Forms.Panel()
         Me.ButtonAdb = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Adb1 = New Global.WindowsApp4.ADB()
         Me.FastBoot1 = New Global.WindowsApp4.FastBoot()
+        Me.Interference1 = New Global.WindowsApp4.Interference()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -109,7 +110,7 @@ Partial Class Android
         '
         Me.Panel3.Controls.Add(Me.Button5)
         Me.Panel3.Controls.Add(Me.Button4)
-        Me.Panel3.Controls.Add(Me.Button3)
+        Me.Panel3.Controls.Add(Me.Buttonpps)
         Me.Panel3.Controls.Add(Me.ButtonFstbt)
         Me.Panel3.Controls.Add(Me.PanelBottom)
         Me.Panel3.Controls.Add(Me.ButtonAdb)
@@ -145,18 +146,18 @@ Partial Class Android
         Me.Button4.Text = "ADB"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Buttonpps
         '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.LawnGreen
-        Me.Button3.FlatAppearance.BorderSize = 4
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("High Tower Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(250, 22)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 30)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "ADB"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Buttonpps.FlatAppearance.BorderColor = System.Drawing.Color.LawnGreen
+        Me.Buttonpps.FlatAppearance.BorderSize = 4
+        Me.Buttonpps.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonpps.Font = New System.Drawing.Font("High Tower Text", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Buttonpps.Location = New System.Drawing.Point(250, 22)
+        Me.Buttonpps.Name = "Buttonpps"
+        Me.Buttonpps.Size = New System.Drawing.Size(116, 30)
+        Me.Buttonpps.TabIndex = 3
+        Me.Buttonpps.Text = "APPS"
+        Me.Buttonpps.UseVisualStyleBackColor = True
         '
         'ButtonFstbt
         '
@@ -209,11 +210,19 @@ Partial Class Android
         Me.FastBoot1.Size = New System.Drawing.Size(918, 360)
         Me.FastBoot1.TabIndex = 5
         '
+        'Interference1
+        '
+        Me.Interference1.Location = New System.Drawing.Point(116, 72)
+        Me.Interference1.Name = "Interference1"
+        Me.Interference1.Size = New System.Drawing.Size(918, 360)
+        Me.Interference1.TabIndex = 6
+        '
         'Android
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1037, 631)
+        Me.Controls.Add(Me.Interference1)
         Me.Controls.Add(Me.FastBoot1)
         Me.Controls.Add(Me.Adb1)
         Me.Controls.Add(Me.Panel3)
@@ -234,7 +243,7 @@ Partial Class Android
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Buttonpps As Button
     Friend WithEvents ButtonFstbt As Button
     Friend WithEvents PanelBottom As Panel
     Friend WithEvents ButtonAdb As Button
@@ -245,4 +254,5 @@ Partial Class Android
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents lbl_Battery As Label
     Friend WithEvents FastBoot1 As Global.WindowsApp4.FastBoot
+    Friend WithEvents Interference1 As Global.WindowsApp4.Interference
 End Class

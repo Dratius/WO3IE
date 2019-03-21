@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Public Class ADB
+    Dim inter As Interference
+    Dim fst As FastBoot
     Dim droid As Android
     Dim myDoc = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\Android Tools\"
 
@@ -101,6 +103,113 @@ Public Class ADB
                     a.Enabled = False
                 End If
             Next
+
+            For Each a In fst.gb_flash.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In fst.gb_manualfastboot.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In fst.gb_flash.Controls
+                If TypeOf a Is CheckBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In inter.gb_APKOptions.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            fst.btn_flash.Enabled = False
+            inter.btn_InstallAPK.Enabled = False
+            inter.btn_RefreshListAPK.Enabled = False
+            inter.btn_RestoreAPK.Enabled = False
+            inter.list_APK.Items.Clear()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Application.Exit()
+        End Try
+    End Sub
+
+    Sub EnableAllControl()
+        Try
+            Dim i As Integer = -1
+            Dim a As Control
+
+            'MAIN TAB
+            For Each a In GroupBox1.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In gb_ManualADB.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In GroupBox1.Controls
+                If TypeOf a Is Button Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In gb_RebootOptions.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In gb_Sideload.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In GroupBox1.Controls
+                If TypeOf a Is RadioButton Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In fst.gb_flash.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In fst.gb_manualfastboot.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In fst.gb_flash.Controls
+                If TypeOf a Is CheckBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In inter.gb_APKOptions.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            fst.btn_flash.Enabled = True
+            inter.btn_InstallAPK.Enabled = True
+            inter.btn_RefreshListAPK.Enabled = True
+            inter.btn_RestoreAPK.Enabled = True
+            inter.list_APK.Items.Clear()
         Catch ex As Exception
             MsgBox(ex.Message)
             Application.Exit()
@@ -425,13 +534,13 @@ Public Class ADB
             End If
 
             If txt_PushPath.Text = "" Or txt_PushSDPath.Text = "" Or txtx_PullFileName.Text = "" Then
-                    MessageBox.Show("Path/File Name cannot be empty", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Exit Sub
-                Else
-                    txt_Logs.AppendText(lbl_time.Text.ToString & "Pulling [" & txtx_PullFileName.Text & "] ..." & vbNewLine)
-                    Call New Action(AddressOf Pull).BeginInvoke(Nothing, Nothing)
-                End If
+                MessageBox.Show("Path/File Name cannot be empty", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            Else
+                txt_Logs.AppendText(lbl_time.Text.ToString & "Pulling [" & txtx_PullFileName.Text & "] ..." & vbNewLine)
+                Call New Action(AddressOf Pull).BeginInvoke(Nothing, Nothing)
             End If
+        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
