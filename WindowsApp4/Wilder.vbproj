@@ -79,6 +79,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor">
+      <HintPath>..\packages\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
     <Reference Include="Interop.SpeechLib">
       <HintPath>..\packages\Interop.SpeechLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -142,6 +145,12 @@
       <DependentUpon>ADB.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\User Form Android\ADB.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\User Form Android\Advanced.Designer.vb">
+      <DependentUpon>Advanced.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Android\Advanced.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form\User Form Android\FastBoot.Designer.vb">
@@ -237,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\ADB.resx">
       <DependentUpon>ADB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Android\Advanced.resx">
+      <DependentUpon>Advanced.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\FastBoot.resx">
       <DependentUpon>FastBoot.vb</DependentUpon>

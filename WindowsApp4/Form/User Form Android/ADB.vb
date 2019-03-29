@@ -4,6 +4,7 @@ Public Class ADB
     Dim fst As FastBoot
     Dim droid As Android
     Dim mr As More
+    Dim adv As Advanced
     Dim myDoc = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\WOX3IE\"
 
     Sub ADBComm(ByVal Arg As String)
@@ -177,10 +178,20 @@ Public Class ADB
                 End If
             Next
 
+            For Each a In adv.TC_Advanced.Controls
+                If TypeOf a Is TabControl Then
+                    a.Enabled = False
+                End If
+            Next
+
             fst.btn_flash.Enabled = False
             inter.btn_InstallAPK.Enabled = False
             inter.btn_RefreshListAPK.Enabled = False
             inter.btn_RestoreAPK.Enabled = False
+            adv.btn_LoadBuildProp.Enabled = False
+            adv.btn_SaveBuildProp.Enabled = False
+            adv.btn_BuildPropTweaks.Enabled = False
+            adv.btn_BackupBuildProp.Enabled = False
             inter.list_APK.Items.Clear()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -302,10 +313,20 @@ Public Class ADB
                 End If
             Next
 
+            For Each a In adv.TC_Advanced.Controls
+                If TypeOf a Is TabControl Then
+                    a.Enabled = True
+                End If
+            Next
+
             fst.btn_flash.Enabled = True
             inter.btn_InstallAPK.Enabled = True
             inter.btn_RefreshListAPK.Enabled = True
             inter.btn_RestoreAPK.Enabled = True
+            adv.btn_LoadBuildProp.Enabled = True
+            adv.btn_SaveBuildProp.Enabled = True
+            adv.btn_BuildPropTweaks.Enabled = True
+            adv.btn_BackupBuildProp.Enabled = True
             inter.list_APK.Items.Clear()
         Catch ex As Exception
             MsgBox(ex.Message)
