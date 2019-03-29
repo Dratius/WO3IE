@@ -156,6 +156,12 @@
     <Compile Include="Form\User Form Android\Interference.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Form\User Form Android\More.Designer.vb">
+      <DependentUpon>More.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Android\More.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form\User Form Malware\Crypotography.Designer.vb">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\Interference.resx">
       <DependentUpon>Interference.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Android\More.resx">
+      <DependentUpon>More.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Malware\BatchVault.resx">
       <DependentUpon>BatchVault.vb</DependentUpon>

@@ -3,7 +3,8 @@ Public Class ADB
     Dim inter As Interference
     Dim fst As FastBoot
     Dim droid As Android
-    Dim myDoc = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\Android Tools\"
+    Dim mr As More
+    Dim myDoc = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\WOX3IE\"
 
     Sub ADBComm(ByVal Arg As String)
         Dim procStartInfo As New ProcessStartInfo
@@ -128,6 +129,54 @@ Public Class ADB
                 End If
             Next
 
+            For Each a In mr.tc_Extra.Controls
+                If TypeOf a Is TabControl Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.gb_ScreenRecord.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.gb_Dialer.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.tb_Misc.Controls
+                If TypeOf a Is Button Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.tb_Misc.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.tb_KeyEvent.Controls
+                If TypeOf a Is Button Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.tb_KeyEvent.Controls
+                If TypeOf a Is TextBox Then
+                    a.Enabled = False
+                End If
+            Next
+
+            For Each a In mr.tb_InputKeyEvent.Controls
+                If TypeOf a Is TextBox Then
+                    a.Enabled = False
+                End If
+            Next
+
             fst.btn_flash.Enabled = False
             inter.btn_InstallAPK.Enabled = False
             inter.btn_RefreshListAPK.Enabled = False
@@ -201,6 +250,54 @@ Public Class ADB
 
             For Each a In inter.gb_APKOptions.Controls
                 If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tc_Extra.Controls
+                If TypeOf a Is TabControl Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.gb_ScreenRecord.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.gb_Dialer.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tb_Misc.Controls
+                If TypeOf a Is Button Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tb_Misc.Controls
+                If TypeOf a Is GroupBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tb_KeyEvent.Controls
+                If TypeOf a Is Button Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tb_KeyEvent.Controls
+                If TypeOf a Is TextBox Then
+                    a.Enabled = True
+                End If
+            Next
+
+            For Each a In mr.tb_InputKeyEvent.Controls
+                If TypeOf a Is TextBox Then
                     a.Enabled = True
                 End If
             Next

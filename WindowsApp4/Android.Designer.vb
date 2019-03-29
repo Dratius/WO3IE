@@ -37,9 +37,10 @@ Partial Class Android
         Me.PanelBottom = New System.Windows.Forms.Panel()
         Me.ButtonAdb = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Adb1 = New Global.WindowsApp4.ADB()
-        Me.FastBoot1 = New Global.WindowsApp4.FastBoot()
         Me.Interference1 = New Global.WindowsApp4.Interference()
+        Me.FastBoot1 = New Global.WindowsApp4.FastBoot()
+        Me.Adb1 = New Global.WindowsApp4.ADB()
+        Me.More1 = New Global.WindowsApp4.More()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -143,7 +144,7 @@ Partial Class Android
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(116, 30)
         Me.Button4.TabIndex = 4
-        Me.Button4.Text = "ADB"
+        Me.Button4.Text = "MORE"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Buttonpps
@@ -193,6 +194,20 @@ Partial Class Android
         Me.ButtonAdb.Text = "ADB"
         Me.ButtonAdb.UseVisualStyleBackColor = True
         '
+        'Interference1
+        '
+        Me.Interference1.Location = New System.Drawing.Point(116, 72)
+        Me.Interference1.Name = "Interference1"
+        Me.Interference1.Size = New System.Drawing.Size(918, 360)
+        Me.Interference1.TabIndex = 6
+        '
+        'FastBoot1
+        '
+        Me.FastBoot1.Location = New System.Drawing.Point(117, 72)
+        Me.FastBoot1.Name = "FastBoot1"
+        Me.FastBoot1.Size = New System.Drawing.Size(918, 360)
+        Me.FastBoot1.TabIndex = 5
+        '
         'Adb1
         '
         Me.Adb1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -203,25 +218,19 @@ Partial Class Android
         Me.Adb1.Size = New System.Drawing.Size(920, 559)
         Me.Adb1.TabIndex = 4
         '
-        'FastBoot1
+        'More1
         '
-        Me.FastBoot1.Location = New System.Drawing.Point(117, 72)
-        Me.FastBoot1.Name = "FastBoot1"
-        Me.FastBoot1.Size = New System.Drawing.Size(918, 360)
-        Me.FastBoot1.TabIndex = 5
-        '
-        'Interference1
-        '
-        Me.Interference1.Location = New System.Drawing.Point(116, 72)
-        Me.Interference1.Name = "Interference1"
-        Me.Interference1.Size = New System.Drawing.Size(918, 360)
-        Me.Interference1.TabIndex = 6
+        Me.More1.Location = New System.Drawing.Point(116, 72)
+        Me.More1.Name = "More1"
+        Me.More1.Size = New System.Drawing.Size(918, 360)
+        Me.More1.TabIndex = 7
         '
         'Android
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1037, 631)
+        Me.Controls.Add(Me.More1)
         Me.Controls.Add(Me.Interference1)
         Me.Controls.Add(Me.FastBoot1)
         Me.Controls.Add(Me.Adb1)
@@ -255,4 +264,5 @@ Partial Class Android
     Friend WithEvents lbl_Battery As Label
     Friend WithEvents FastBoot1 As Global.WindowsApp4.FastBoot
     Friend WithEvents Interference1 As Global.WindowsApp4.Interference
+    Friend WithEvents More1 As Global.WindowsApp4.More
 End Class

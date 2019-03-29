@@ -29,6 +29,7 @@
     End Sub
 
     Private Sub Android_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Adb1.BringToFront()
         PanelBottom.Width = ButtonAdb.Width
         PanelBottom.Left = ButtonAdb.Left
     End Sub
@@ -52,6 +53,7 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        More1.BringToFront()
         PanelBottom.Width = Button4.Width
         PanelBottom.Left = Button4.Left
     End Sub
