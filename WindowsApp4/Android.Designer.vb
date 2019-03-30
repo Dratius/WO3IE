@@ -30,6 +30,7 @@ Partial Class Android
         Me.lbl_Batt = New System.Windows.Forms.Label()
         Me.lbl_DevInfo = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Buttonpps = New System.Windows.Forms.Button()
@@ -41,6 +42,7 @@ Partial Class Android
         Me.FastBoot1 = New Global.WindowsApp4.FastBoot()
         Me.Adb1 = New Global.WindowsApp4.ADB()
         Me.More1 = New Global.WindowsApp4.More()
+        Me.Advanced1 = New Global.WindowsApp4.Advanced()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -109,6 +111,8 @@ Partial Class Android
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Panel3.Controls.Add(Me.MetroButton2)
         Me.Panel3.Controls.Add(Me.Button5)
         Me.Panel3.Controls.Add(Me.Button4)
         Me.Panel3.Controls.Add(Me.Buttonpps)
@@ -121,6 +125,16 @@ Partial Class Android
         Me.Panel3.Size = New System.Drawing.Size(920, 72)
         Me.Panel3.TabIndex = 3
         '
+        'MetroButton2
+        '
+        Me.MetroButton2.Location = New System.Drawing.Point(744, 51)
+        Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.Size = New System.Drawing.Size(86, 23)
+        Me.MetroButton2.Style = MetroFramework.MetroColorStyle.Green
+        Me.MetroButton2.TabIndex = 8
+        Me.MetroButton2.Text = "Settings"
+        Me.MetroButton2.Theme = MetroFramework.MetroThemeStyle.Light
+        '
         'Button5
         '
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.LawnGreen
@@ -131,7 +145,7 @@ Partial Class Android
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(116, 30)
         Me.Button5.TabIndex = 5
-        Me.Button5.Text = "ADB"
+        Me.Button5.Text = "ADVANCED"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
@@ -225,11 +239,19 @@ Partial Class Android
         Me.More1.Size = New System.Drawing.Size(918, 360)
         Me.More1.TabIndex = 7
         '
+        'Advanced1
+        '
+        Me.Advanced1.Location = New System.Drawing.Point(123, 80)
+        Me.Advanced1.Name = "Advanced1"
+        Me.Advanced1.Size = New System.Drawing.Size(918, 360)
+        Me.Advanced1.TabIndex = 8
+        '
         'Android
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1037, 631)
+        Me.Controls.Add(Me.Advanced1)
         Me.Controls.Add(Me.More1)
         Me.Controls.Add(Me.Interference1)
         Me.Controls.Add(Me.FastBoot1)
@@ -265,4 +287,6 @@ Partial Class Android
     Friend WithEvents FastBoot1 As Global.WindowsApp4.FastBoot
     Friend WithEvents Interference1 As Global.WindowsApp4.Interference
     Friend WithEvents More1 As Global.WindowsApp4.More
+    Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
+    Friend WithEvents Advanced1 As Global.WindowsApp4.Advanced
 End Class

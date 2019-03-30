@@ -482,7 +482,7 @@ Public Class ADB
         ADBComm("pull " & txt_apkpath.Text & " """ & mydir & """")
         Process.Start(myDoc & "apk-dir\")
         txt_Logs.AppendText(lbl_time.Text.ToString & "[" & ssl & "] pulled" & vbNewLine)
-        'TODO PopulateApkDir()
+        adv.PopulateApkDir()
         Me.Enabled = True
         cobo_apklist.SelectedIndex = -1
     End Sub
@@ -661,7 +661,7 @@ Public Class ADB
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
         lbl_time.Text = "[...." & Date.Now.ToLongTimeString & "....] "
     End Sub
 

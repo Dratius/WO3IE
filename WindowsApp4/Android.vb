@@ -59,6 +59,7 @@
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Advanced1.BringToFront()
         PanelBottom.Width = Button5.Width
         PanelBottom.Left = Button5.Left
     End Sub
@@ -85,5 +86,9 @@
         Else
             pb_BatteryBar.Value = lbl_Battery.Text
         End If
+    End Sub
+
+    Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
+        Settings.Show()
     End Sub
 End Class

@@ -22,7 +22,6 @@ Partial Class ADB
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btn_apk_pull = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,7 +42,6 @@ Partial Class ADB
         Me.btn_GetSerialNumber = New System.Windows.Forms.Button()
         Me.btn_DeviceList = New System.Windows.Forms.Button()
         Me.btn_ShellConsole = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.txt_Logs = New System.Windows.Forms.TextBox()
         Me.btn_ClearLogs = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -273,9 +271,6 @@ Partial Class ADB
         Me.btn_ShellConsole.Text = "Shell Console"
         Me.btn_ShellConsole.UseVisualStyleBackColor = True
         '
-        'Timer1
-        '
-        '
         'txt_Logs
         '
         Me.txt_Logs.Cursor = System.Windows.Forms.Cursors.Default
@@ -451,7 +446,6 @@ Partial Class ADB
     Friend WithEvents Label1 As Label
     Friend WithEvents txt_PushSDPath As TextBox
     Friend WithEvents txt_PushPath As TextBox
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Label3 As Label

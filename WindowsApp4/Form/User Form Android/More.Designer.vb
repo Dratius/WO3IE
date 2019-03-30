@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class More
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,8 @@ Partial Class More
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.tc_Extra = New System.Windows.Forms.TabControl()
         Me.tb_KeyEvent = New System.Windows.Forms.TabPage()
         Me.btn_SwipeSend = New System.Windows.Forms.Button()
@@ -72,7 +71,6 @@ Partial Class More
         Me.lbl_VidRes = New System.Windows.Forms.Label()
         Me.btn_RecordVideo = New System.Windows.Forms.Button()
         Me.pb_RecordVideo = New System.Windows.Forms.ProgressBar()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.tc_Extra.SuspendLayout()
         Me.tb_KeyEvent.SuspendLayout()
         Me.tb_InputKeyEvent.SuspendLayout()
@@ -577,10 +575,6 @@ Partial Class More
         Me.pb_RecordVideo.Size = New System.Drawing.Size(236, 23)
         Me.pb_RecordVideo.TabIndex = 0
         '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1000
-        '
         'More
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -655,5 +649,4 @@ Partial Class More
     Friend WithEvents lbl_VidRes As Label
     Friend WithEvents btn_RecordVideo As Button
     Friend WithEvents pb_RecordVideo As ProgressBar
-    Friend WithEvents Timer1 As Timer
 End Class

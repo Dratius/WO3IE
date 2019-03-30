@@ -453,8 +453,8 @@ Public Class More
 
         pb_RecordVideo.Maximum = txt_VideoTime.Text
 
-        Timer1.Enabled = True
-        Timer1.Start()
+        inter.Timer1.Enabled = True
+        inter.Timer1.Start()
 
         Call New Action(AddressOf ScreenRecord).BeginInvoke(Nothing, Nothing)
     End Sub

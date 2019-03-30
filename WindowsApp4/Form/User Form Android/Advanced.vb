@@ -2,6 +2,8 @@
 Public Class Advanced
     Dim db As ADB
     Dim inter As Interference
+    Dim sett As Settings
+
     Public Shared myDoc = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\WOX3IE\"
 
     Public Sub ZzCmd(ByVal args As String)
@@ -135,7 +137,7 @@ Public Class Advanced
 
         'Set variables
         Dim quot As String = """"
-        'Dim lls As String = cobo_apkt_apkcomlv.SelectedItem.ToString
+        Dim lls As String = sett.cobo_apkt_apkcomlv.SelectedItem.ToString
         Dim ssl As String = list_apkt.SelectedItem.ToString
         Dim spath As String = quot & myDoc & "apk-dir\" & quot
         Dim ppath As String = quot & myDoc & "projects\" & ssl & quot
@@ -145,7 +147,7 @@ Public Class Advanced
             Shell("cmd.exe /c rmdir /S /Q " & ppath & "\META-INF", AppWinStyle.Hide, True)
         End If
 
-        ZzCmd("a -tzip " & unsigname & " " & ppath & " " & "-mx") 'TODO lls)
+        ZzCmd("a -tzip " & unsigname & " " & ppath & " " & "-mx" & lls)
 
         db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Finished..." & vbNewLine)
 
@@ -164,7 +166,7 @@ Public Class Advanced
         Dim ppath As String = myDoc & "apk-sign/"
         Dim unsigname As String = quot & myDoc & "apk-sign/unsigned" & ssl & quot
         Dim signedname As String = quot & myDoc & "apk-sign/signed" & ssl & quot
-        Dim java As String = "/c java -Xmx" 'TODO & txt_apkt_heapsz.Text.ToString & "m -jar bin/signapk.jar -w bin/testkey.x509.pem bin/testkey.pk8 "
+        Dim java As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/signapk.jar -w bin/testkey.x509.pem bin/testkey.pk8 "
 
         If Not My.Computer.FileSystem.FileExists(myDoc & "apk-sign\unsigned" & ssl) Then
             db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Project file for this apk does not exist..." & vbNewLine)
@@ -299,8 +301,8 @@ Public Class Advanced
     Sub ApktControlDisable()
         gb_apkt_st.Enabled = False
         gb_apkt_at.Enabled = False
-        'TODO gb_apkt_comsets.Enabled = False
-        'TODO gb_apkt_sett.Enabled = False
+        sett.gb_apkt_comsets.Enabled = False
+        sett.gb_apkt_sett.Enabled = False
         list_apkt.Enabled = False
         btn_apkt_marketsign.Enabled = False
         chbx_apkt_system.Enabled = False
@@ -340,11 +342,11 @@ Public Class Advanced
         Dim apkdir As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/Android Tools/apk-dir/" & ssl & quot
         Dim proj As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/Android Tools/projects/" & ssl & quot
         Dim projsys As String = "projects/" & "system" & ssl
-        Dim cmd0 As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d " & apkdir & " " & "-o" & " " & proj
-        Dim cmd1 As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -r " & apkdir & " " & "-o" & " " & proj
-        Dim cmd2 As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -s " & apkdir & " " & "-o" & " " & proj
-        Dim cmd3 As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -r -s " & apkdir & " " & "-o" & " " & proj
-        Dim cmd4 As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar b " & apkdir & " " & "-o" & " " & projsys
+        Dim cmd0 As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d " & apkdir & " " & "-o" & " " & proj
+        Dim cmd1 As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -r " & apkdir & " " & "-o" & " " & proj
+        Dim cmd2 As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -s " & apkdir & " " & "-o" & " " & proj
+        Dim cmd3 As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar d -r -s " & apkdir & " " & "-o" & " " & proj
+        Dim cmd4 As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar b " & apkdir & " " & "-o" & " " & projsys
 
 
         If mycom.FileExists(myDoc & "apk-sign\signed" & ssl) Then
@@ -359,18 +361,18 @@ Public Class Advanced
 
         CheckDir()
 
-        db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Decompiling Apk " & cobo_apkt_decompile.SelectedItem.ToString & vbNewLine)
+        db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Decompiling Apk " & sett.cobo_apkt_decompile.SelectedItem.ToString & vbNewLine)
 
         If chbx_apkt_system.Checked = True Then
             JavaCmd(cmd4)
         ElseIf chbx_apkt_system.Checked = False Then
-            If cobo_apkt_decompile.SelectedIndex = 0 Then
+            If sett.cobo_apkt_decompile.SelectedIndex = 0 Then
                 JavaCmd(cmd0)
-            ElseIf cobo_apkt_decompile.SelectedIndex = 1 Then
+            ElseIf sett.cobo_apkt_decompile.SelectedIndex = 1 Then
                 JavaCmd(cmd1)
-            ElseIf cobo_apkt_decompile.SelectedIndex = 2 Then
+            ElseIf sett.cobo_apkt_decompile.SelectedIndex = 2 Then
                 JavaCmd(cmd2)
-            ElseIf cobo_apkt_decompile.SelectedIndex = 3 Then
+            ElseIf sett.cobo_apkt_decompile.SelectedIndex = 3 Then
                 JavaCmd(cmd3)
             End If
         End If
@@ -403,9 +405,9 @@ Public Class Advanced
         Dim mycom = My.Computer.FileSystem
         Dim quot As String = """"
         Dim ssl As String = list_apkt.SelectedItem.ToString
-        Dim apkdir As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/Android Tools/apk-sign/unsigned" & ssl & quot
-        Dim proj As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/Android Tools/projects/" & ssl & quot
-        Dim cmd As String = "/c java -Xmx" & txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar b " & proj & " " & "-o" & " " & apkdir
+        Dim apkdir As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/WOX3IE/apk-sign/unsigned" & ssl & quot
+        Dim proj As String = quot & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/WOX3IE/projects/" & ssl & quot
+        Dim cmd As String = "/c java -Xmx" & sett.txt_apkt_heapsz.Text.ToString & "m -jar bin/apktool.jar b " & proj & " " & "-o" & " " & apkdir
 
         If mycom.FileExists(myDoc & "apk-sign\signed" & ssl) Then
             mycom.DeleteFile(myDoc & "apk-sign\signed" & ssl, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
@@ -481,8 +483,8 @@ Public Class Advanced
         lbl_apkt_checkproj.ForeColor = Color.Black
 
         If list_apkt.SelectedIndex = -1 Then
-            'TODO gb_apkt_comsets.Enabled = True
-            'TODO gb_apkt_sett.Enabled = True
+            sett.gb_apkt_comsets.Enabled = True
+            sett.gb_apkt_sett.Enabled = True
             gb_apkt_st.Enabled = False
             gb_apkt_at.Enabled = False
             list_apkt.Enabled = True
@@ -493,7 +495,7 @@ Public Class Advanced
     Private Sub AlliApk()
 
         Dim quot As String = """"
-        'TODO Dim lls As String = cobo_apkt_apkcomlv.SelectedItem.ToString
+        Dim lls As String = sett.cobo_apkt_apkcomlv.SelectedItem.ToString
         Dim ssl As String = list_apkt.SelectedItem.ToString
         Dim spath As String = quot & myDoc & "apk-dir\" & quot
         Dim ppath As String = quot & myDoc & "projects\" & ssl & quot
@@ -503,7 +505,7 @@ Public Class Advanced
             Shell("cmd.exe /c rmdir /S /Q " & ppath & "\META-INF", AppWinStyle.Hide, True)
         End If
 
-        ZzCmd("a -tzip " & unsigname & " " & ppath & " " & "-mx") 'TODO & lls)
+        ZzCmd("a -tzip " & unsigname & " " & ppath & " " & "-mx" & lls)
 
         db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Signing Apk..." & vbNewLine)
         Call New Action(AddressOf SignApk).BeginInvoke(Nothing, Nothing)
@@ -626,7 +628,7 @@ Public Class Advanced
 
         strText = Split(DummyTextbox.Text, vbCrLf)
 
-        inter.ADBComm("push """ & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/Android Tools/build.prop"" /sdcard/tmp.ahs")
+        inter.ADBComm("push """ & My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/WOX3IE/build.prop"" /sdcard/tmp.ahs")
         db.txt_Logs.AppendText(db.lbl_time.Text.ToString & "Pushing build.prop to /sdcard/..." & vbNewLine)
 
         inter.ADBComm("shell su -c mount -o rw,remount,rw -t " & strText(2) & " " & strText(0) & " " & strText(1))
