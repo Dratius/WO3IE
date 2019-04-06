@@ -259,6 +259,8 @@ Partial Class Android
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Android"
         Me.ShowIcon = False
         Me.Text = "Android Tools"

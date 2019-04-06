@@ -431,12 +431,14 @@ Partial Class Settings
         Me.ClientSize = New System.Drawing.Size(399, 519)
         Me.Controls.Add(Me.TC_Settings)
         Me.Font = New System.Drawing.Font("Minion Pro", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.HelpButton = True
         Me.Name = "Settings"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
+        Me.TopMost = True
         Me.TC_Settings.ResumeLayout(False)
         Me.Tab_ADBSettings.ResumeLayout(False)
         Me.gb_ADBWifi.ResumeLayout(False)

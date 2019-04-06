@@ -130,10 +130,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Android.Designer.vb">
+    <Compile Include="Form\Android.Designer.vb">
       <DependentUpon>Android.vb</DependentUpon>
     </Compile>
-    <Compile Include="Android.vb">
+    <Compile Include="Form\Android.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\ApplicationEvents.vb" />
@@ -247,7 +247,7 @@
     <Compile Include="Classes\WindowsApp4.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Android.resx">
+    <EmbeddedResource Include="Form\Android.resx">
       <DependentUpon>Android.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\ADB.resx">
