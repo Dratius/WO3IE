@@ -130,10 +130,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Android.Designer.vb">
+    <Compile Include="Form\User Form Android\Android.Designer.vb">
       <DependentUpon>Android.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Android.vb">
+    <Compile Include="Form\User Form Android\Android.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\ApplicationEvents.vb" />
@@ -189,10 +189,16 @@
     <Compile Include="Form\User Form Malware\BatchVault.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form\Viral.vb">
+    <Compile Include="Form\User Form Windows\Tools.Designer.vb">
+      <DependentUpon>Tools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Windows\Tools.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\User Form Malware\Viral.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Viral.Designer.vb">
+    <Compile Include="Form\User Form Malware\Viral.Designer.vb">
       <DependentUpon>Viral.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -232,10 +238,10 @@
     <Compile Include="Form\SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ThirdEYE.Designer.vb">
+    <Compile Include="Form\User Form Malware\ThirdEYE.Designer.vb">
       <DependentUpon>ThirdEYE.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThirdEYE.vb">
+    <Compile Include="Form\User Form Malware\ThirdEYE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\User Form Malware\Ransomwares.Designer.vb">
@@ -247,7 +253,7 @@
     <Compile Include="Classes\WindowsApp4.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form\Android.resx">
+    <EmbeddedResource Include="Form\User Form Android\Android.resx">
       <DependentUpon>Android.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Android\ADB.resx">
@@ -277,13 +283,13 @@
     <EmbeddedResource Include="Form\User Form Malware\Crypotography.resx">
       <DependentUpon>Crypotography.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Viral.af.resx">
+    <EmbeddedResource Include="Form\User Form Malware\Viral.af.resx">
       <DependentUpon>Viral.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Viral.en-TZ.resx">
+    <EmbeddedResource Include="Form\User Form Malware\Viral.en-TZ.resx">
       <DependentUpon>Viral.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Viral.resx">
+    <EmbeddedResource Include="Form\User Form Malware\Viral.resx">
       <DependentUpon>Viral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Loader.resx">
@@ -298,7 +304,7 @@
     <EmbeddedResource Include="Form\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThirdEYE.resx">
+    <EmbeddedResource Include="Form\User Form Malware\ThirdEYE.resx">
       <DependentUpon>ThirdEYE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User Form Malware\Ransomwares.resx">
