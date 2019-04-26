@@ -217,6 +217,12 @@
     <Compile Include="Form\Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\User Form Windows\Windows Tools.Designer.vb">
+      <DependentUpon>Windows Tools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User Form Windows\Windows Tools.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -294,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Loader.resx">
       <DependentUpon>Loader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Windows\Tools.resx">
+      <DependentUpon>Tools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User Form Windows\Windows Tools.resx">
+      <DependentUpon>Windows Tools.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
